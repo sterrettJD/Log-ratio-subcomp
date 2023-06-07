@@ -1,0 +1,30 @@
+---
+title: "Are ILR subcompositionally coherent?"
+format: html
+editor: visual
+---
+
+# Simulate
+## Def func
+```{r}
+
+simulate <- function(N, n_feat){
+     matrix(sapply(X=1:n_feat,
+                   FUN=function(x) MASS::rnegbin(n=N, mu=sample(x=5:10,size=1), theta=sample(x=1:5, size=1))),
+               nrow=N, ncol=n_feat)
+}
+
+simulate(100,100)
+```
+
+# CLR
+```{r}
+
+
+```
+
+
+```{r}
+
+```
+
