@@ -4,6 +4,10 @@ format: html
 editor: visual
 ---
 
+```{r setup, include=F}
+library(compositions)
+```
+
 # Simulate
 ## Def func
 ```{r}
@@ -14,17 +18,58 @@ simulate <- function(N, n_feat){
                nrow=N, ncol=n_feat)
 }
 
-simulate(100,100)
+# params
+N <- 100
+n.features <- 100
 ```
 
 # CLR
 ```{r}
+# simulate data
+data <- simulate(N, n.features)
+hist(data[1,])
+
+# clr transform
+clr.data <- as.matrix(clr(data))
+hist(clr.data[1,])
+
+# remove a feature data
+data.filtered <- data[,1:(n.features-1)]
+
+# compare clr on filtered data to clr on original data
+clr.data.2 <- clr(data.filtered)
+portion.same <- sum(clr.data.2 == clr.data[,1:(n.features-1)])/length(clr.data.2)
 
 
+print(paste0(round(portion.same*100, digits=0),
+      "% of entries in the clr-transformed data are the same after removing a feature"))
 ```
 
-
+# ILR
 ```{r}
+# ilr transform
+ilr.data <- as.matrix(ilr(data))
+hist(ilr.data[1,])
+
+
+# compare ilt on filtered data to ilr on original data
+ilr.data.2 <- ilr(data.filtered)
+n.features.ilr <- n.features - 1
+portion.same <- sum(ilr.data.2 == ILR.data[,1:(n.features.ilr-1)])/length(ilr.data.2)
+
+
+print(paste0(round(portion.same*100, digits=0),
+      "% of entries in the ILR-transformed data are the same after removing a feature"))
 
 ```
 
+The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this
+case with zeros not replaced. For each subcomposition,
+the parts were renormalized and the chi-square distances
+between the parts were computed. These are compared
+with the chi-square distances between the parts using the
+original compositional values in the full composition. In
+each case the full set of principal coordinates is computed,
+thus defining the geometry of the compositional parts and
+of the subcompositional parts, and then the Procrustes
+correlation is used to measure the degree of concordance.
