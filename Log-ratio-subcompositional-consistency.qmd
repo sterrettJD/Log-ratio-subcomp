@@ -55,7 +55,7 @@ hist(ilr.data[1,])
 # compare ilt on filtered data to ilr on original data
 ilr.data.2 <- ilr(data.filtered)
 n.features.ilr <- n.features - 1
-portion.same <- sum(ilr.data.2 == ILR.data[,1:(n.features.ilr-1)])/length(ilr.data.2)
+portion.same <- sum(ilr.data.2 == ilr.data[,1:(n.features.ilr-1)])/length(ilr.data.2)
 
 
 print(paste0(round(portion.same*100, digits=0),
@@ -73,3 +73,5 @@ each case the full set of principal coordinates is computed,
 thus defining the geometry of the compositional parts and
 of the subcompositional parts, and then the Procrustes
 correlation is used to measure the degree of concordance.
+
+This is from the Aitchison's reappraisal paper with thom quinn.
