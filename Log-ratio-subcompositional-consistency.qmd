@@ -65,7 +65,6 @@ print(paste0(round(portion.same*100, digits=0),
 
 ```
 
-<<<<<<< HEAD
 The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this
 case with zeros not replaced. For each subcomposition,
 the parts were renormalized and the chi-square distances
@@ -80,4 +79,10 @@ correlation is used to measure the degree of concordance.
 This is from the Aitchison's reappraisal paper with thom quinn.
 =======
 The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this case with zeros not replaced. For each subcomposition, the parts were renormalized and the chi-square distances between the parts were computed. These are compared with the chi-square distances between the parts using the original compositional values in the full composition. In each case the full set of principal coordinates is computed, thus defining the geometry of the compositional parts and of the subcompositional parts, and then the Procrustes correlation is used to measure the degree of concordance.
->>>>>>> a448c6a24002ffc34778d5d9c9f8db221e8905dd
+
+
+# Here is a test to desync our projects
+
+```{r}
+
+```
