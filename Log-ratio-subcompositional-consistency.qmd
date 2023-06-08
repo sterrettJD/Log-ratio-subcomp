@@ -76,9 +76,7 @@ thus defining the geometry of the compositional parts and
 of the subcompositional parts, and then the Procrustes
 correlation is used to measure the degree of concordance.
 
-This is from the Aitchison's reappraisal paper with thom quinn.
-=======
-The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this case with zeros not replaced. For each subcomposition, the parts were renormalized and the chi-square distances between the parts were computed. These are compared with the chi-square distances between the parts using the original compositional values in the full composition. In each case the full set of principal coordinates is computed, thus defining the geometry of the compositional parts and of the subcompositional parts, and then the Procrustes correlation is used to measure the degree of concordance.
+This is from the [Aitchison's reappraisal paper](https://arxiv.org/pdf/2201.05197.pdf) with thom quinn. 
 
 
 # Here is a test to desync our projects
