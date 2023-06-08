@@ -9,7 +9,7 @@ library(compositions)
 ```
 
 # Simulate
-## Def func
+
 ```{r}
 
 simulate <- function(N, n_feat){
@@ -24,6 +24,7 @@ n.features <- 100
 ```
 
 # CLR
+
 ```{r}
 # simulate data
 data <- simulate(N, n.features)
@@ -46,6 +47,7 @@ print(paste0(round(portion.same*100, digits=0),
 ```
 
 # ILR
+
 ```{r}
 # ilr transform
 ilr.data <- as.matrix(ilr(data))
@@ -63,13 +65,4 @@ print(paste0(round(portion.same*100, digits=0),
 
 ```
 
-The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this
-case with zeros not replaced. For each subcomposition,
-the parts were renormalized and the chi-square distances
-between the parts were computed. These are compared
-with the chi-square distances between the parts using the
-original compositional values in the full composition. In
-each case the full set of principal coordinates is computed,
-thus defining the geometry of the compositional parts and
-of the subcompositional parts, and then the Procrustes
-correlation is used to measure the degree of concordance.
+The level of incoherence can be investigated by generating random subcompositions of the Tellus data, in this case with zeros not replaced. For each subcomposition, the parts were renormalized and the chi-square distances between the parts were computed. These are compared with the chi-square distances between the parts using the original compositional values in the full composition. In each case the full set of principal coordinates is computed, thus defining the geometry of the compositional parts and of the subcompositional parts, and then the Procrustes correlation is used to measure the degree of concordance.
